@@ -8,13 +8,20 @@
     <link rel="stylesheet" href="./Css/style.css">
 </head>
 <body>
-    <div class="form">
-        <input type="text" class="form-control" placeholder="Ingresa tu nombre" id="ingre_nombre" >
-        <button class="btn btn-secondary" onclick="enviarNombre()">Enviar</button>
-    </div>
-    <div>
-        <p class="border border-3 border-dark p-3">Hola <span id="saludar"></span>, como has estado</p>
-    </div>
+    <main>
+        <section>
+            <div class=" container mt-5 w-50 border">
+                <input type="text" class="form-control my-3 border-primary" placeholder="Ingresa tu nombre" id="i_nombre" >
+                <button class="btn btn-success offset-5" onclick="enviarNombre()">Enviar</button>
+            </div>
+            <div class="container mt-5 w-50">
+                <p class="border border-3 border-dark rounded-4 p-3">Hola <span id="saludar" class="text-danger"></span>, como has estado?</p>
+                <p class="border border-3 border-dark rounded-4 p-3" id="saluda"></p>
+            </div>
+    
+        </section>
+
+    </main>
 
 
 
