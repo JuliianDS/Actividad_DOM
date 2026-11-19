@@ -1,0 +1,18 @@
+.circulo1{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    box-shadow: 0px 5px 30px 30px rgba(25, 135, 84, 0.45);    
+}
+.circulo2{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    box-shadow: 0px 5px 30px 30px rgba(181, 209, 19, 0.521);
+}
+.circulo3{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    box-shadow: 0px 5px 30px 30px rgba(135, 25, 25, 0.45);
+}
