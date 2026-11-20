@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +9,39 @@
 
     <title>Document</title>
 </head>
+
 <body>
-    
+    <main>
+        <section class="container w-50 mt-5 border border-1 rounded">
+            <form action="">
+                <legend>Registro</legend>
+                <div class="gap-2 d-flex flex-column">
+                    <input id="name" type="text" placeholder="Ingresa tu nombre" class="form-control mt-3">
+                    <p class="aviso1 text-danger"></p>
+                    <input id="correo" type="email" placeholder="example@email.com" class="form-control mt-3">
+                    <p class="aviso2 text-danger"></p>
+                    <input id="edad" type="number" placeholder="Ingresa tu edad" class="form-control mt-3">
+                    <p class="aviso3 text-danger"></p>
+                </div>
+                <button class="btn btn-success mt-3 offset-5" type="button">Registrarse</button>
+            </form>
+        </section>
+
+    </main>
+    <!-- <script>
+        const input = document.querySelectorAll('input');
+        function nice() {
+            input.forEach(element => {
+        
+                if(element.getAttribute('type') == "email"){
+                    element.classList.add("is-valid")
+                }
+            });
+        }
+
+
+    </script> -->
+    <script src="./Js/script.js"></script>
 </body>
+
 </html>
