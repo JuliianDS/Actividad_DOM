@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,38 +9,49 @@
 
     <title>Document</title>
 </head>
+
 <body>
     <main>
         <section class="container w-50 mt-4 p-4 border border-dark rounded-2">
             <h1 class="text-center">Control de Gastos</h1>
-            <div class="d-flex flex-column gap-2">
-            <input id="inputPr" type="number" class="form-control" placeholder="Ingresa el presupuesto">
-            <input id="inputG" type="text" class="form-control" placeholder="Nuevo Gasto">
-            <input id="inputV" type="number" class="form-control" placeholder="$ Costo">
-            <button class="btn btn-success">Agregar Gasto</button>
-            </div>
             <div class="">
-                <h3>Resumen de gasto y presupuesto</h3>
-                <table>
-                    <thead class="border border-dark">
-                        <th>Presupuesto</th>
-                        <th class="px-3">Gastado</th>
-                        <th>Restante</th>
-                    </thead>
-                    <tbody>
 
-                    </tbody>
-                </table>               
-                <p></p>
+                <input id="inputPr" type="number" class="form-control" placeholder="Ingresa el presupuesto">
             </div>
-            <div>
-                <h3>Lista de gastos</h3>
-                <ul>
+            <h2 class="mt-4">Gastos</h2>
+            <div class=" d-flex flex-column gap-2">
+                <input id="inputG" type="text" class="form-control" placeholder="Nuevo Gasto">
+                <input id="inputV" type="number" class="form-control" placeholder="$ Costo">
+                <button class="btn btn-success">Agregar Gasto</button>
+            </div>
+            <h3 class="mt-3">Resumen de gasto y presupuesto</h3>
+            <div class="bg-white p-2 rounded-2">
+                <div>
 
-                </ul>
+                    <table>
+                        <thead class="border border-dark">
+                            <tr>
+                                <th>Presupuesto</th>
+                                <th class="px-3">Gastado</th>
+                                <th>Restante</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                    <p></p>
+                </div>
+                <div>
+                    <h3>Lista de gastos</h3>
+                    <ul>
+
+                    </ul>
+                </div>
             </div>
         </section>
     </main>
     <script src="./Js/script.js"></script>
 </body>
+
 </html>
