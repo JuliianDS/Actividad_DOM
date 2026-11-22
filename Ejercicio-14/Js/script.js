@@ -5,21 +5,66 @@ const tabla = document.querySelector('tbody');
 const lista = document.querySelector('ul');
 const btn = document.querySelector('button');
 const p = document.querySelector('p');
-let presupuesto = inputP.value;
-btn.addEventListener('click', function(){
-    presupuesto = calculo;
-    if(inputV != ""){
-        let calculo = presupuesto - inputV.value;
-        tabla.innerHTML += `
-        <tr>
-            <td>${presupuesto}</td>
-            <td>${inputG.value}</td>
-            <td>${calculo}</td>
-        </tr>
-        `
-        lista.innerHTML += `
-        <li>${inputG.value}: ${inputV.value}</li>        
-        `
-    }
+const alerta = document.querySelector('span');
+let inicio = true;
+let presupuesto = 0;
+
+btn.addEventListener('click', function () {
+    alerta.classList.remove('alert');
+    alerta.innerText = ``;
     
+    if (inputP.value != "" && inputG.value != "" && inputV.value != "") {
+
+        if (inicio == true) {
+            presupuesto = Number(inputP.value) - Number(inputV.value)
+            
+            tabla.innerHTML += `
+                <tr>
+                    <td class="border border-dark">${inputP.value}</td>
+                    <td class="border border-dark">${inputV.value}</td>
+                    <td class="border border-dark">${presupuesto}</td>
+                </tr>
+            `
+            lista.innerHTML += `
+                <li>${inputG.value}: ${inputV.value}</li>
+            `
+            inicio = false;
+            inputG.value = "";
+            inputV.value = "";
+            inputP.value = presupuesto
+            
+        }else if(inicio == false){
+            let Npresupuesto = presupuesto - Number(inputV.value);
+            tabla.innerHTML += `
+                <tr>
+                    <td class="border border-dark">${presupuesto}</td>
+                    <td class="border border-dark">${inputV.value}</td>
+                    <td class="border border-dark">${Npresupuesto}</td>
+                </tr>
+            `
+            lista.innerHTML += `
+                <li>${inputG.value}: ${inputV.value}</li>
+            `
+            if(presupuesto < inputV.value){
+                p.innerText = `Cuidado!! haz superado tu presupuesto`
+            }
+            presupuesto = Npresupuesto
+            inputG.value = "";
+            inputV.value = "";
+            inputP.value = presupuesto            
+        }
+
+
+
+
+    } else {
+        alerta.classList.add('alert');
+        alerta.innerText = `Hay campos invalidos o vacios`
+    }
+
 })
+
+
+
+
+

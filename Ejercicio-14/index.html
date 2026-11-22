@@ -14,11 +14,13 @@
     <main>
         <section class="container w-50 mt-4 p-4 border border-dark rounded-2">
             <h1 class="text-center">Control de Gastos</h1>
-            <div class="">
-
-                <input id="inputPr" type="number" class="form-control" placeholder="Ingresa el presupuesto">
+            <div class="mb-4">
+                <input id="inputP" type="number" class="form-control" placeholder="Ingresa el presupuesto">
             </div>
-            <h2 class="mt-4">Gastos</h2>
+            <div class="d-flex justify-content-center">
+                <span class=" alert-danger "></span>
+            </div>
+            <h2 class="mt-2">Gastos</h2>
             <div class=" d-flex flex-column gap-2">
                 <input id="inputG" type="text" class="form-control" placeholder="Nuevo Gasto">
                 <input id="inputV" type="number" class="form-control" placeholder="$ Costo">
@@ -31,16 +33,16 @@
                     <table>
                         <thead class="border border-dark">
                             <tr>
-                                <th>Presupuesto</th>
-                                <th class="px-3">Gastado</th>
-                                <th>Restante</th>
+                                <th class="border border-dark">Presupuesto</th>
+                                <th class="px-3 border border-dark">Gastado</th>
+                                <th class="border border-dark">Restante</th>
                             </tr>
                         </thead>
                         <tbody>
 
                         </tbody>
                     </table>
-                    <p></p>
+                    <p class="fs-5 text-danger text-center"></p>
                 </div>
                 <div>
                     <h3>Lista de gastos</h3>

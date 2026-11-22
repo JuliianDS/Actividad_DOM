@@ -9,6 +9,33 @@
     <title>Document</title>
 </head>
 <body>
+    <main class="container w-50 border border-dark rounded-3 mt-3 p-3">
+        <h2>Tareas</h2>
+        <section class="border border-3 border-success rounded-3 my-3 px-3 bg-white">
+            <div class="my-3">
+                <input type="text" placeholder="Nueva Tarea" class="form-control">                
+            </div>
+            <div >
+                <label for="selectP" class="fw-bold">Prioridad:</label>
+                <select name="selectP" id="selectP" class="form-select">
+                    <option value="baja">Baja</option>
+                    <option value="media">Media</option>
+                    <option value="alta">Alta</option>
+                </select>
+            </div>
+            <div class="d-flex justify-content-center my-3">
+                <button class="btn btn-success">Agregar nueva tarea</button>
+            </div>
+        </section>
+        <h3>Lista de Tareas</h3>
+        <section class="border border-3 border-success rounded-3 my-3 px-3 bg-white">
+            <ul>
+
+            </ul>
+        </section>
+    </main>
+    <script src="./Js/script.js"></script>
+
     
 </body>
 </html>
